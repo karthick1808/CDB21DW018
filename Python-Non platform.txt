@@ -1,0 +1,76 @@
+basics
+--------------
+
+Program for maximum of 3 numbers
+Write a program to read Employee data from the keyboard and print that data.
+Write a program to read 3 float numbers from the keyboard with , seperator and print
+their sum.
+How to read multiple values from the keyboard in a single line
+Write a Program to display Command Line Arguments
+
+flow control
+---------
+Write a program to take a single digit number from the key board and print is value in
+English word?
+Write a program to find biggest of given 3 numbers from the commad prompt
+Write a program to display *'s in pyramid style(also known as equivalent triangle
+write a Program to display all positions of substring in a given main string
+Write a Program to reverse order of words.
+Write a program to print characters at odd position and even position for the given
+String?
+Write a program to sort the characters of the string and first alphabet symbols
+followed by numeric values
+Write a program to remove duplicate characters from the given input string?
+
+Data structure
+----------------
+Write a program to display unique vowels present in the given word?
+Write a program to print different vowels present in the given word?
+Write a program to enter name and percentage marks in a dictionary and
+display information on the screen
+Write a program to take dictionary from the keyboard and print the sum
+of values using dict
+Write a program to find number of occurrences of each letter present in
+the given string using dict 
+Write a program to accept student name and marks from the keyboard
+and creates a dictionary. Also display student marks by taking student name
+as input
+Write a Python Function to find factorial of given number with recursion.
+Write a program to create a lambda function to find square of given
+number
+Lambda function to find sum of 2 given numbers
+Lambda Function to find biggest of given values.
+Program to filter only even numbers from the list by using filter()
+function?
+Write a program To generate first n numbers
+
+
+
+Write a program to check whether the given file exists or not. If it is
+available then print its content
+Program to print the number of lines,words and characters present in the
+given file
+Program to read image file and write to a new image file
+Write a program to display all contents of Current working directory including sub directories
+Writing Multiple Employee Objects to the file
+Program to call Parent class constructor by using super():
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
