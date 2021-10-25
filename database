@@ -1,0 +1,32 @@
+Commands for other databases
+
+Use the following commands as a reference when working with Azure Database for MySQL and MariaDB
+
+create database appdb;
+use appdb;
+
+CREATE TABLE Customer(
+	Customerid VARCHAR(100),
+	CustomerName VARCHAR(100)
+);
+
+INSERT INTO Customer(Customerid,CustomerName) VALUES('C1','UserA');
+INSERT INTO Customer(Customerid,CustomerName) VALUES('C2','UserB');
+INSERT INTO Customer(Customerid,CustomerName) VALUES('C3','UserC');
+
+SELECT * from Customer;
+
+Use the following commands as a reference when working with Azure Database for PostgreSQL
+
+create database appdb;
+
+CREATE TABLE Customer(
+	Customerid VARCHAR(100),
+	CustomerName VARCHAR(100)
+);
+
+INSERT INTO Customer(Customerid,CustomerName) VALUES('C1','UserA');
+INSERT INTO Customer(Customerid,CustomerName) VALUES('C2','UserB');
+INSERT INTO Customer(Customerid,CustomerName) VALUES('C3','UserC');
+
+SELECT * from Customer;
