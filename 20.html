@@ -1,0 +1,25 @@
+<h4><strong>Lab - Azure SQL Database - Working with data - Resources</strong></h4><p><br></p><blockquote><p>Data Definition Language – DDL statements</p></blockquote><p>These statements are used to define data structures.</p><p>These statements can be used to create, alter or drop data structures.</p><ul><li><p>ALTER – Can be used to alter a table</p></li><li><p>CREATE – Can be used to create a table</p></li><li><p>DROP – Can be used to drop a table</p></li></ul><blockquote><p>Data Manipulation Language – DML statements</p></blockquote><p>These statements are used to work with the data within a database.</p><ul><li><p>INSERT – This is used to insert data into a database table.</p></li><li><p>SELECT – This can be used to query for data from within a database table.</p></li><li><p>UPDATE – This can be used to update data from within a database table.</p></li><li><p>DELETE - This can be used to delete data from within a database table.</p></li></ul><p>Use the following statements to create tables and insert data into the tables</p><blockquote><p>Creation of tables</p></blockquote><pre class="prettyprint linenums">CREATE TABLE Customer (
+    CustomerID varchar(100) NOT NULL,
+    CustomerName varchar(1000),    
+    PRIMARY KEY (CustomerID)
+);</pre><p><br></p><pre class="prettyprint linenums">CREATE TABLE Course (
+    CourseID varchar(100) NOT NULL,
+    CourseName varchar(1000),
+    Price real,    
+    PRIMARY KEY (CourseID)
+);
+</pre><p><br></p><pre class="prettyprint linenums">CREATE TABLE Orders (
+    OrderID varchar(100) NOT NULL,
+    CourseID varchar(100),
+    CustomerID varchar(100),    
+    Discountpercent int,
+    PRIMARY KEY (OrderID),
+    FOREIGN KEY (CustomerID) REFERENCES Customer(CustomerID),
+    FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+);</pre><p><br></p><blockquote><p>Inserting data into tables</p></blockquote><pre class="prettyprint linenums">INSERT INTO Customer(CustomerID,CustomerName) values ('C1','UserA');
+INSERT INTO Customer(CustomerID,CustomerName) values ('C2','UserB');
+INSERT INTO Customer(CustomerID,CustomerName) values ('C3','UserC');</pre><p><br></p><pre class="prettyprint linenums">INSERT INTO COURSE(CourseID,CourseName,Price) values ('D1','AZ-900',99.99);
+INSERT INTO COURSE(CourseID,CourseName,Price) values ('D2','DP-900',100.99);
+INSERT INTO COURSE(CourseID,CourseName,Price) values ('D3','AZ-104',89.99);</pre><p><br></p><pre class="prettyprint linenums">INSERT INTO Orders(OrderID,CourseID,CustomerID,Discountpercent) values ('O1','D2','C1',90);
+INSERT INTO Orders(OrderID,CourseID,CustomerID,Discountpercent) values ('O2','D1','C2',50);
+INSERT INTO Orders(OrderID,CourseID,CustomerID,Discountpercent) values ('O3','D3','C3',60);</pre><blockquote><p>Selecting data from tables</p></blockquote><p>SELECT * FROM Customer;</p><p>SELECT * FROM Course;</p><p>SELECT * FROM Orders;</p>
