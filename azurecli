@@ -1,0 +1,13 @@
+$SubscriptionId = '9b155e55-6862-4187-ab42-30cea146bebb'
+$resourceGroupName = "MSSQLPAAS"
+$location = "Central India"
+$adminSqlLogin = "karthick1808"
+$password = "Welcome@12345"
+$databaseName = "karthick"
+$serverName="karthickselvam180887"
+
+Set-AzContext -SubscriptionId $subscriptionId 
+
+$server = New-AzSqlServer -ResourceGroupName $resourceGroupName -ServerName $serverName -Location $location -SqlAdministratorCredentials $(New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList $adminSqlLogin, $(ConvertTo-SecureString -String $password -AsPlainText -Force))
+
+$database = New-AzSqlDatabase  -ResourceGroupName $resourceGroupName -ServerName $serverName -DatabaseName $databaseName -RequestedServiceObjectiveName "Basic"
